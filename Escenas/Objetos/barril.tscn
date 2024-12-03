@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd3x6tfbesbq7"]
+
+[ext_resource type="Texture2D" uid="uid://bx5ah4kafgirv" path="res://Recursos/Animaciones/Objetos/Merchant Ship/Sprites/Barrel/Idle/1.png" id="1_au0bv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxpwm"]
+size = Vector2(23.4406, 24.6325)
+
+[node name="Barril" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.150698, 0.423336)
+shape = SubResource("RectangleShape2D_bxpwm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.222977, 0)
+scale = Vector2(1.041, 1)
+texture = ExtResource("1_au0bv")

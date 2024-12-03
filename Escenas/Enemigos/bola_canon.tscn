@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://b240sacsgfaoi"]
+
+[ext_resource type="Script" path="res://Scripts/bola_canon.gd" id="1_hffem"]
+[ext_resource type="Texture2D" uid="uid://3oyd8dlkx5q4" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Ball Idle/1.png" id="2_ba7jf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ba8nf"]
+radius = 8.0
+
+[sub_resource type="Animation" id="Animation_o7bu2"]
+resource_name = "Hit"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y3ier"]
+_data = {
+"Hit": SubResource("Animation_o7bu2")
+}
+
+[node name="BolaCanon" type="Node2D"]
+script = ExtResource("1_hffem")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ba7jf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.648914, 0.471937)
+shape = SubResource("CircleShape2D_ba8nf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y3ier")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

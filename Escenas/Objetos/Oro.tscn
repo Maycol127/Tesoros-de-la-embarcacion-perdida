@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bfdbdnm0q8bpx"]
+
+[ext_resource type="Texture2D" uid="uid://dilmgltsw61m6" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_lktf0"]
+[ext_resource type="Script" path="res://Scripts/monedas.gd" id="1_tgaek"]
+[ext_resource type="Texture2D" uid="uid://6nojoyu6ug7p" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_ahnxx"]
+[ext_resource type="Texture2D" uid="uid://da1rxd4mcbcip" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_7eg3b"]
+[ext_resource type="Texture2D" uid="uid://djim33t1rgikr" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_ksynv"]
+[ext_resource type="Texture2D" uid="uid://bvu4x2n7ed4xo" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/01.png" id="6_bxkgv"]
+[ext_resource type="Texture2D" uid="uid://dq8xth5rcjjn8" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/02.png" id="7_gy08s"]
+[ext_resource type="Texture2D" uid="uid://dglmehgpsomms" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/03.png" id="8_onujk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afvxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lktf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ahnxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7eg3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ksynv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("6_bxkgv")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_gy08s")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_onujk")
+}],
+"loop": true,
+"name": &"Recolectada",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfftv"]
+radius = 6.08276
+
+[node name="Monedas" type="Node2D"]
+script = ExtResource("1_tgaek")
+
+[node name="Oro" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_afvxp")
+animation = &"Idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.501129, 0)
+shape = SubResource("CircleShape2D_rfftv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

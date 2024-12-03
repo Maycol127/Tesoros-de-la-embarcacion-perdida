@@ -1,0 +1,109 @@
+[gd_scene load_steps=17 format=3 uid="uid://dq81qm51ajds5"]
+
+[ext_resource type="Script" path="res://Scripts/Canon.gd" id="1_y7evr"]
+[ext_resource type="Texture2D" uid="uid://uop67lk212ml" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/4.png" id="2_0i2fl"]
+[ext_resource type="Texture2D" uid="uid://cv1k44s7rgypn" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/1.png" id="3_bg2a0"]
+[ext_resource type="Texture2D" uid="uid://buvq6gfeslwlt" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/2.png" id="4_hdn5c"]
+[ext_resource type="Texture2D" uid="uid://bx4hialoujpb" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/3.png" id="5_pgtkh"]
+[ext_resource type="Texture2D" uid="uid://b0xg5qsp3u3dr" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/5.png" id="6_3mjnr"]
+[ext_resource type="Texture2D" uid="uid://50ke2pnas8s2" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Fire/6.png" id="7_75bdc"]
+[ext_resource type="Texture2D" uid="uid://boay303ha8qta" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Hit/1.png" id="8_w6nvr"]
+[ext_resource type="Texture2D" uid="uid://b5nta7vlhxrev" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Hit/2.png" id="9_71xaq"]
+[ext_resource type="Texture2D" uid="uid://cco7vsycbh3b4" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Hit/3.png" id="10_yi0sw"]
+[ext_resource type="Texture2D" uid="uid://t8o81du36sq5" path="res://Recursos/Animaciones/Objetos/Shooter Traps/Sprites/Cannon/Cannon Hit/4.png" id="11_i0pcn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65fuw"]
+size = Vector2(17, 22.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymbqa"]
+size = Vector2(30, 23)
+
+[sub_resource type="Animation" id="Animation_xnm6c"]
+resource_name = "Fire"
+length = 0.5
+step = 0.0965
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_bg2a0"), ExtResource("4_hdn5c"), ExtResource("5_pgtkh"), ExtResource("2_0i2fl"), ExtResource("6_3mjnr"), ExtResource("7_75bdc")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2895),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fire"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3tpau"]
+resource_name = "Hit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_w6nvr"), ExtResource("9_71xaq"), ExtResource("10_yi0sw"), ExtResource("11_i0pcn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:shooting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_snlea"]
+_data = {
+"Fire": SubResource("Animation_xnm6c"),
+"Hit": SubResource("Animation_3tpau")
+}
+
+[node name="Canon" type="StaticBody2D" groups=["Enemigo"]]
+script = ExtResource("1_y7evr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0i2fl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 1.75)
+shape = SubResource("RectangleShape2D_65fuw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ymbqa")
+
+[node name="Firepoint" type="Marker2D" parent="."]
+position = Vector2(-15, -2)
+scale = Vector2(-1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_snlea")
+}

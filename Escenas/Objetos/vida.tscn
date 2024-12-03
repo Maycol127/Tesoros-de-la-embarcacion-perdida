@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyvb6y41blnrh"]
+
+[ext_resource type="Script" path="res://Scripts/vida.gd" id="1_48i8d"]
+[ext_resource type="Texture2D" uid="uid://bku0htvrmwvt3" path="res://Recursos/Animaciones/Objetos/12-Live and Coins/Big Heart Idle (18x14).png" id="1_xvi2t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek7se"]
+size = Vector2(13, 11.5)
+
+[sub_resource type="Animation" id="Animation_oqodu"]
+resource_name = "Idle"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 7, 7, 6]
+}
+
+[sub_resource type="Animation" id="Animation_7fjje"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bm5ln"]
+_data = {
+"Idle": SubResource("Animation_oqodu"),
+"RESET": SubResource("Animation_7fjje")
+}
+
+[node name="HealthUp" type="Node2D"]
+position = Vector2(-2, 0)
+script = ExtResource("1_48i8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xvi2t")
+hframes = 8
+frame = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 0.25)
+shape = SubResource("RectangleShape2D_ek7se")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bm5ln")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

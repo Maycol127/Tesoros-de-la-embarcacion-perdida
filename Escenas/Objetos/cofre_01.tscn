@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb3ympcqryfk2"]
+
+[ext_resource type="Script" path="res://Scripts/cofre_01.gd" id="1_lfxgv"]
+[ext_resource type="PackedScene" uid="uid://ddvydg2d3d5kk" path="res://Escenas/Objetos/cofre.tscn" id="1_wykiv"]
+[ext_resource type="PackedScene" uid="uid://cki1is2yit8px" path="res://Escenas/Jugador/espada.tscn" id="2_6wog5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyfa8"]
+size = Vector2(8, 6.5)
+
+[node name="cofre_01" type="Area2D"]
+script = ExtResource("1_lfxgv")
+
+[node name="Cofre" parent="." instance=ExtResource("1_wykiv")]
+z_index = -1
+
+[node name="Sword" parent="." instance=ExtResource("2_6wog5")]
+visible = false
+position = Vector2(9, -4)
+rotation = 4.71239
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_qyfa8")
+
+[connection signal="cofre_abierto" from="Cofre" to="." method="_on_cofre_abierto"]

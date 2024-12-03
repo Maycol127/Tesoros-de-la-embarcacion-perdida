@@ -1,0 +1,55 @@
+[gd_scene load_steps=14 format=3 uid="uid://bersbfkvnaw35"]
+
+[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="1_cv6to"]
+[ext_resource type="Texture2D" uid="uid://dw7s1sc6th0pn" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="2_s0ljv"]
+[ext_resource type="Texture2D" uid="uid://c3d5jfpuvrmr" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="3_ghi4n"]
+[ext_resource type="Texture2D" uid="uid://dmb6v0rw0lk3i" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="4_lprns"]
+[ext_resource type="Texture2D" uid="uid://b00dpl26srttl" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 04.png" id="5_y385i"]
+[ext_resource type="Texture2D" uid="uid://cyonry4exgnaw" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png" id="6_1vqnh"]
+[ext_resource type="Texture2D" uid="uid://2s4um183ylwq" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 06.png" id="7_niqdv"]
+[ext_resource type="Texture2D" uid="uid://caj0itsjye8lk" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="8_p4wsp"]
+[ext_resource type="Texture2D" uid="uid://k0i4rca2pvr1" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="9_kpdtd"]
+[ext_resource type="Texture2D" uid="uid://ddlkwsweu02vh" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="10_wwudv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5elnt"]
+size = Vector2(34, 92)
+
+[sub_resource type="Animation" id="Animation_jhlwf"]
+resource_name = "Activado"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_s0ljv"), ExtResource("3_ghi4n"), ExtResource("4_lprns"), ExtResource("5_y385i"), ExtResource("6_1vqnh"), ExtResource("7_niqdv"), ExtResource("8_p4wsp"), ExtResource("9_kpdtd"), ExtResource("10_wwudv")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6au5p"]
+_data = {
+"Activado": SubResource("Animation_jhlwf")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cv6to")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s0ljv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_5elnt")
+
+[node name="Bandera" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6au5p")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

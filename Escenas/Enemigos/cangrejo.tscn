@@ -1,0 +1,225 @@
+[gd_scene load_steps=42 format=3 uid="uid://eaea1i2rw3ew"]
+
+[ext_resource type="Texture2D" uid="uid://mql4xrjmfi3x" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 01.png" id="1_0i2de"]
+[ext_resource type="Script" path="res://Scripts/cangrejo.gd" id="1_ae7rw"]
+[ext_resource type="Texture2D" uid="uid://biusyxdxe256r" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 01.png" id="1_ucyxn"]
+[ext_resource type="Texture2D" uid="uid://b028d4dc78hv1" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 02.png" id="2_3uyb0"]
+[ext_resource type="Texture2D" uid="uid://b57r7sid15c8y" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 02.png" id="2_xu8gm"]
+[ext_resource type="Texture2D" uid="uid://cra2tbpqxl8a" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 03.png" id="3_6fnm2"]
+[ext_resource type="Texture2D" uid="uid://bnr406ke3rvwy" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 03.png" id="3_7uvdl"]
+[ext_resource type="Texture2D" uid="uid://2rsof5uu2tvo" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 04.png" id="4_0a550"]
+[ext_resource type="Texture2D" uid="uid://cepdh8oxov0v8" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 01.png" id="4_mihqc"]
+[ext_resource type="Texture2D" uid="uid://bxckbln0kfsfa" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 02.png" id="5_cxyyu"]
+[ext_resource type="Texture2D" uid="uid://qi5hmey18sx" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png" id="5_wep3s"]
+[ext_resource type="Texture2D" uid="uid://cgb4tjxfec460" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 06.png" id="6_dm2qt"]
+[ext_resource type="Texture2D" uid="uid://cuailoeqhdfks" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 03.png" id="6_w6ynl"]
+[ext_resource type="Texture2D" uid="uid://j5x086xokifg" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 07.png" id="7_afr72"]
+[ext_resource type="Texture2D" uid="uid://dxq72dhu3adkm" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 04.png" id="7_fdhua"]
+[ext_resource type="Texture2D" uid="uid://bmnavcgg4qqqw" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 08.png" id="8_d2c0c"]
+[ext_resource type="Texture2D" uid="uid://bxgmrqlnaop58" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 01.png" id="8_dv3d3"]
+[ext_resource type="Texture2D" uid="uid://dipq6ue4fr3gj" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 09.png" id="9_do224"]
+[ext_resource type="Texture2D" uid="uid://cd1we5baelh3a" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 02.png" id="9_enex5"]
+[ext_resource type="Texture2D" uid="uid://dbl4tq82sutel" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 03.png" id="10_4fmcm"]
+[ext_resource type="Texture2D" uid="uid://b8wy0llbxx3s6" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png" id="10_bro5r"]
+[ext_resource type="Texture2D" uid="uid://dso3tlkkn6ug5" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 04.png" id="11_8bv3w"]
+[ext_resource type="Texture2D" uid="uid://ds3rl18ct04h3" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png" id="11_pk0p8"]
+[ext_resource type="Texture2D" uid="uid://c40f1r1577bp3" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png" id="12_7qx77"]
+[ext_resource type="Texture2D" uid="uid://yhxs5m5msxg2" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 01.png" id="12_g2ixx"]
+[ext_resource type="Texture2D" uid="uid://dq0ir6eh4xemx" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="13_xa0lu"]
+[ext_resource type="Texture2D" uid="uid://cigbxaty27tm2" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 02.png" id="13_y3xfm"]
+[ext_resource type="Texture2D" uid="uid://hvgh2s5pwhsb" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 03.png" id="14_iiyuo"]
+[ext_resource type="Texture2D" uid="uid://chpwj8jr2ncue" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="14_jvu26"]
+[ext_resource type="Texture2D" uid="uid://dajf7f73oj67h" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="15_50vfw"]
+[ext_resource type="Texture2D" uid="uid://36kpmk07sun7" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 04.png" id="15_atx5x"]
+[ext_resource type="Texture2D" uid="uid://cmpo4iixvb2sa" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 01.png" id="25_8ywc8"]
+[ext_resource type="Texture2D" uid="uid://b53tvm7m4jcte" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 02.png" id="26_eb0eg"]
+[ext_resource type="Texture2D" uid="uid://dgh7jdehrsld7" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 03.png" id="27_fh72m"]
+[ext_resource type="Texture2D" uid="uid://dc2trlyl2yikh" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/10-Dead Ground/Dead Ground 01.png" id="34_3kcb2"]
+[ext_resource type="Texture2D" uid="uid://bo2m0flckt7oe" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/10-Dead Ground/Dead Ground 02.png" id="35_vbu8h"]
+[ext_resource type="Texture2D" uid="uid://b88ceflvhjgc8" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/10-Dead Ground/Dead Ground 04.png" id="36_0et4d"]
+[ext_resource type="Texture2D" uid="uid://dxrvir1rjcbio" path="res://Recursos/Animaciones/Enemigos/The Crusty Crew/Sprites/Crabby/10-Dead Ground/Dead Ground 03.png" id="37_hyio3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vx5v8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ucyxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xu8gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7uvdl")
+}],
+"loop": true,
+"name": &"Anticipacion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mihqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cxyyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w6ynl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fdhua")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dv3d3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_enex5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4fmcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8bv3w")
+}],
+"loop": true,
+"name": &"Dead hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_g2ixx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y3xfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_iiyuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_atx5x")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0i2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3uyb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6fnm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0a550")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wep3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dm2qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_afr72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d2c0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_do224")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_8ywc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_eb0eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_fh72m")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_bro5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pk0p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7qx77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xa0lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jvu26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_50vfw")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_3kcb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_vbu8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_0et4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hyio3")
+}],
+"loop": true,
+"name": &"Suelo",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjgs5"]
+size = Vector2(20, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4j8o"]
+size = Vector2(28, 23)
+
+[node name="Enemigo" type="CharacterBody2D" groups=["Enemigo"]]
+collision_layer = 2
+collision_mask = 33
+script = ExtResource("1_ae7rw")
+
+[node name="Cangrejo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vx5v8")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_cjgs5")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_p4j8o")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-10, 7)
+target_position = Vector2(0, 13)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

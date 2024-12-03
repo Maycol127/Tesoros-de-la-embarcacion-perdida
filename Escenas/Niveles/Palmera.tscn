@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://doo11x7dtabe2"]
+
+[ext_resource type="Texture2D" uid="uid://d212kceic8rj5" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png" id="1_7so2s"]
+[ext_resource type="Texture2D" uid="uid://cysjjm5aygrr2" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 02.png" id="2_05uq7"]
+[ext_resource type="Texture2D" uid="uid://drhfhwdrlmn5t" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 03.png" id="3_ay1av"]
+[ext_resource type="Texture2D" uid="uid://y40jujjwugbm" path="res://Recursos/Animaciones/Objetos/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 04.png" id="4_84r3b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cppr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7so2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_05uq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ay1av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_84r3b")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npseh"]
+size = Vector2(24, 1)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cppr5")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15.5)
+shape = SubResource("RectangleShape2D_npseh")

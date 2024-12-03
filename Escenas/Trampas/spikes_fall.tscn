@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://ck66i0bhrowkk"]
+
+[ext_resource type="Script" path="res://Scripts/Spikes_fall.gd" id="1_tg2a3"]
+[ext_resource type="Texture2D" uid="uid://rscd2kkbmy6d" path="res://Recursos/Animaciones/Trampas/Spikes/trap_spike_1.png" id="2_bj0uk"]
+[ext_resource type="Texture2D" uid="uid://cjek0ltoosdui" path="res://Recursos/Animaciones/Trampas/Spikes/trap_spike_2.png" id="3_1lola"]
+[ext_resource type="Texture2D" uid="uid://diyi4ms1jm00y" path="res://Recursos/Animaciones/Trampas/Spikes/trap_spike_3.png" id="4_cfksl"]
+[ext_resource type="Texture2D" uid="uid://d03l373k61blv" path="res://Recursos/Animaciones/Trampas/Spikes/trap_spike_4.png" id="5_ymfhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b18m"]
+size = Vector2(34, 137)
+
+[sub_resource type="Animation" id="Animation_t3387"]
+resource_name = "Shake"
+length = 0.85
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2, 0), Vector2(1, 0), Vector2(-2, 0), Vector2(-1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_1lola"), ExtResource("4_cfksl"), ExtResource("5_ymfhp"), ExtResource("2_bj0uk")]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fall"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrkma"]
+_data = {
+"Shake": SubResource("Animation_t3387")
+}
+
+[node name="Spikes_fall" type="Node2D"]
+script = ExtResource("1_tg2a3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("2_bj0uk")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-13, -16, 14, -16, 16, -13, 16, -10, 14, -6, 13, -5, 12, -5, 11, -6, 10, -8, 8, -5, 7, -3, 6, -1, 5, 0, 4, 0, 3, -1, 1, -5, 0, -8, -2, -4, -3, -3, -4, -3, -5, -4, -6, -6, -7, -8, -8, -5, -9, -3, -10, -1, -11, 0, -12, 0, -13, -1, -15, -5, -15, -8)
+
+[node name="Deteccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deteccion"]
+position = Vector2(0, 52.5)
+shape = SubResource("RectangleShape2D_6b18m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lrkma")
+}
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Deteccion" to="." method="_on_deteccion_area_entered"]

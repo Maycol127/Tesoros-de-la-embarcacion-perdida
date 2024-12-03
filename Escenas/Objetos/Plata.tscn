@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://cghkt4pvgxt3i"]
+
+[ext_resource type="Script" path="res://Scripts/plata.gd" id="1_6e44v"]
+[ext_resource type="Texture2D" uid="uid://c8xt23vs73c1d" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Silver Coin/01.png" id="2_7uip5"]
+[ext_resource type="Texture2D" uid="uid://sjtb8um8d8bq" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Silver Coin/02.png" id="3_j7kwp"]
+[ext_resource type="Texture2D" uid="uid://c4x8l6e16htmn" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Silver Coin/03.png" id="4_abunw"]
+[ext_resource type="Texture2D" uid="uid://bvu4x2n7ed4xo" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/01.png" id="5_266f4"]
+[ext_resource type="Texture2D" uid="uid://c5sy6ss22lhcw" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Silver Coin/04.png" id="5_mu6ie"]
+[ext_resource type="Texture2D" uid="uid://dq8xth5rcjjn8" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/02.png" id="6_4s43v"]
+[ext_resource type="Texture2D" uid="uid://dglmehgpsomms" path="res://Recursos/Animaciones/Objetos/Pirate Treasure/Sprites/Coin Effect/03.png" id="7_ynjk4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0gtgl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7uip5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j7kwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_abunw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mu6ie")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("5_266f4")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_4s43v")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_ynjk4")
+}],
+"loop": true,
+"name": &"Recolectada",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gbwj"]
+radius = 6.08276
+
+[node name="Plata" type="Node2D"]
+script = ExtResource("1_6e44v")
+
+[node name="Plata" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0gtgl")
+animation = &"Idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.501129, 0)
+shape = SubResource("CircleShape2D_4gbwj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

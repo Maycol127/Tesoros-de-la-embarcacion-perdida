@@ -1,0 +1,131 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvv63y8vntrt2"]
+
+[ext_resource type="Script" path="res://Scripts/pause.gd" id="1_llfu1"]
+
+[node name="UI_Principal" type="CanvasLayer"]
+script = ExtResource("1_llfu1")
+
+[node name="MenuPausa" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -80.0
+offset_right = 60.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.584314, 0.623529, 0.921569, 0.392157)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPausa"]
+clip_contents = true
+layout_mode = 0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 150.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuPausa/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Continuar" type="Button" parent="MenuPausa/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Volver"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MenuPausa/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Reiniciar" type="Button" parent="MenuPausa/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Reiniciar"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MenuPausa/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Controles" type="Button" parent="MenuPausa/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Controles"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MenuPausa/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Salir" type="Button" parent="MenuPausa/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Salir"
+
+[node name="WinScreen" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(240, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.584314, 0.623529, 0.921569, 0.392157)
+
+[node name="Label" type="Label" parent="WinScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_right = 44.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Score: 1500"
+
+[node name="reiniciar" type="Button" parent="WinScreen"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.34537
+offset_top = -34.5636
+offset_right = 81.3454
+offset_bottom = -3.5636
+grow_vertical = 0
+text = "Reiniciar"
+
+[node name="continuar" type="Button" parent="WinScreen"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.2182
+offset_top = -34.5636
+offset_right = -4.2182
+offset_bottom = -3.5636
+grow_horizontal = 0
+grow_vertical = 0
+text = "Continuar"
+
+[connection signal="pressed" from="MenuPausa/VBoxContainer/HBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="MenuPausa/VBoxContainer/HBoxContainer2/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="MenuPausa/VBoxContainer/HBoxContainer3/Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="MenuPausa/VBoxContainer/HBoxContainer4/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="WinScreen/reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="WinScreen/continuar" to="." method="_on_continuar_pressed"]

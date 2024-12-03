@@ -1,0 +1,483 @@
+[gd_scene load_steps=108 format=3 uid="uid://cqego1s5avyan"]
+
+[ext_resource type="Texture2D" uid="uid://d34cjojgsqr0r" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/1.png" id="1_0came"]
+[ext_resource type="Script" path="res://Scripts/Ballena.gd" id="1_8utuq"]
+[ext_resource type="Texture2D" uid="uid://0y3qb8nofveo" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/2.png" id="2_yweml"]
+[ext_resource type="Texture2D" uid="uid://bbqyic0ux7b38" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/3.png" id="3_b8x62"]
+[ext_resource type="Texture2D" uid="uid://cgtrwda7ldy7m" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/4.png" id="4_i1765"]
+[ext_resource type="Texture2D" uid="uid://bj0ne36cecert" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/5.png" id="5_yoygu"]
+[ext_resource type="Texture2D" uid="uid://bdkpbyihku7ga" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/6.png" id="6_5am7g"]
+[ext_resource type="Texture2D" uid="uid://bwyrl0fyi8dja" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/7.png" id="7_r8c7p"]
+[ext_resource type="Texture2D" uid="uid://bovqmpdtqy68d" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/8.png" id="8_o5who"]
+[ext_resource type="Texture2D" uid="uid://cunld20o88rgl" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/9.png" id="9_jngen"]
+[ext_resource type="Texture2D" uid="uid://1iumjshxms8i" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/10.png" id="10_isltl"]
+[ext_resource type="Texture2D" uid="uid://bd6tihdc0o58f" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/7-Attack/11.png" id="11_436ne"]
+[ext_resource type="Texture2D" uid="uid://of8bwl4p1dts" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/1.png" id="12_w1qg2"]
+[ext_resource type="Texture2D" uid="uid://hy1fkl0a0kx3" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/2.png" id="13_8l6gn"]
+[ext_resource type="Texture2D" uid="uid://cbfb7h6j7bw58" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/3.png" id="14_n07j8"]
+[ext_resource type="Texture2D" uid="uid://dt6p1vfx2wk52" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/4.png" id="15_si1va"]
+[ext_resource type="Texture2D" uid="uid://uetgyswat36m" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/5.png" id="16_tdr0v"]
+[ext_resource type="Texture2D" uid="uid://bxw7o8klsclac" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/10-Dead Hit/6.png" id="17_bnl3n"]
+[ext_resource type="Texture2D" uid="uid://1q7s31fymcx2" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/1.png" id="18_44avw"]
+[ext_resource type="Texture2D" uid="uid://c5util6qw0ok0" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/2.png" id="19_grxlk"]
+[ext_resource type="Texture2D" uid="uid://bgswgxyvrmtua" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/3.png" id="20_qrae1"]
+[ext_resource type="Texture2D" uid="uid://cfq4fbc4ub1b5" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/4.png" id="21_acsa8"]
+[ext_resource type="Texture2D" uid="uid://dm0ldhvwf7d6f" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/5.png" id="22_oitss"]
+[ext_resource type="Texture2D" uid="uid://c6nixrrxikdp4" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/6.png" id="23_6bfpy"]
+[ext_resource type="Texture2D" uid="uid://dm7vt8td6rw2i" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/9-Hit/7.png" id="24_i21qx"]
+[ext_resource type="Texture2D" uid="uid://clhllujw23502" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/1.png" id="25_lfmi5"]
+[ext_resource type="Texture2D" uid="uid://3x55myq6558f" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/2.png" id="26_1yagn"]
+[ext_resource type="Texture2D" uid="uid://w3mkuaf5031h" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/3.png" id="27_a8xd8"]
+[ext_resource type="Texture2D" uid="uid://dpkjecyiaoxlo" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/4.png" id="28_muhdt"]
+[ext_resource type="Texture2D" uid="uid://dfp2rmghx28gl" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/5.png" id="29_71s0e"]
+[ext_resource type="Texture2D" uid="uid://244b7asjt4x8" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/6.png" id="30_4bewa"]
+[ext_resource type="Texture2D" uid="uid://bekelgypbn3xf" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/7.png" id="31_k8ysx"]
+[ext_resource type="Texture2D" uid="uid://dtl7rgbejqf7r" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/8.png" id="32_w2nkp"]
+[ext_resource type="Texture2D" uid="uid://claab3h74n5eh" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/9.png" id="33_ymdp2"]
+[ext_resource type="Texture2D" uid="uid://ca6dvq1fucgao" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/10.png" id="34_7qdhb"]
+[ext_resource type="Texture2D" uid="uid://d0sh5erlnt13k" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/11.png" id="35_64mij"]
+[ext_resource type="Texture2D" uid="uid://pgnwlj2h5e1" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/12.png" id="36_cuqfg"]
+[ext_resource type="Texture2D" uid="uid://bg4r1dysuaa6u" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/13.png" id="37_o8j3c"]
+[ext_resource type="Texture2D" uid="uid://defykxomsdvpf" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/14.png" id="38_xhlj4"]
+[ext_resource type="Texture2D" uid="uid://durg1teo4l35m" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/15.png" id="39_kut3w"]
+[ext_resource type="Texture2D" uid="uid://dmdvnqkg74ff8" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/16.png" id="40_xm3cv"]
+[ext_resource type="Texture2D" uid="uid://ry646a8n6ay1" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/17.png" id="41_5dxp1"]
+[ext_resource type="Texture2D" uid="uid://cxcjuesxvmun0" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/18.png" id="42_j18ct"]
+[ext_resource type="Texture2D" uid="uid://dsvnetkt30dq4" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/19.png" id="43_gvvao"]
+[ext_resource type="Texture2D" uid="uid://bl7pfyagpan51" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/20.png" id="44_k5cd7"]
+[ext_resource type="Texture2D" uid="uid://h4wi1mcmltil" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/21.png" id="45_j4ghb"]
+[ext_resource type="Texture2D" uid="uid://bocu26yiwfnmg" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/22.png" id="46_jr24f"]
+[ext_resource type="Texture2D" uid="uid://7cijwck3hre1" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/23.png" id="47_4e341"]
+[ext_resource type="Texture2D" uid="uid://rothtws2nquv" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/24.png" id="48_ybpif"]
+[ext_resource type="Texture2D" uid="uid://cp2ded4x2hmp5" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/25.png" id="49_lf5yr"]
+[ext_resource type="Texture2D" uid="uid://bppu751bj23s2" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/26.png" id="50_472tv"]
+[ext_resource type="Texture2D" uid="uid://d3j8m28ellkhl" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/27.png" id="51_ljqt0"]
+[ext_resource type="Texture2D" uid="uid://da4smna4o2dpt" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/28.png" id="52_rc2qc"]
+[ext_resource type="Texture2D" uid="uid://c5owhdy6oxubj" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/29.png" id="53_jds3v"]
+[ext_resource type="Texture2D" uid="uid://b61e6mnvwghss" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/30.png" id="54_te2wk"]
+[ext_resource type="Texture2D" uid="uid://yhahrqvdcyc" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/31.png" id="55_hmlnu"]
+[ext_resource type="Texture2D" uid="uid://d0hpbhcp7stiy" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/32.png" id="56_3qnel"]
+[ext_resource type="Texture2D" uid="uid://da2h03tpregke" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/33.png" id="57_y4q0d"]
+[ext_resource type="Texture2D" uid="uid://v208wqsku016" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/34.png" id="58_i7svv"]
+[ext_resource type="Texture2D" uid="uid://btn8vlijds7wt" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/35.png" id="59_dq1jf"]
+[ext_resource type="Texture2D" uid="uid://vvfsis3isvla" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/36.png" id="60_v63th"]
+[ext_resource type="Texture2D" uid="uid://b17o85h5ux1a6" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/37.png" id="61_l1r33"]
+[ext_resource type="Texture2D" uid="uid://w6jqm88hvx8a" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/38.png" id="62_l56vj"]
+[ext_resource type="Texture2D" uid="uid://duc7k0svb53ls" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/39.png" id="63_nit4r"]
+[ext_resource type="Texture2D" uid="uid://8hsm6t7p4btq" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/40.png" id="64_3t31a"]
+[ext_resource type="Texture2D" uid="uid://bbdrbk16msvsy" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/41.png" id="65_78nj2"]
+[ext_resource type="Texture2D" uid="uid://8t0p77bxp7in" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/42.png" id="66_s3iod"]
+[ext_resource type="Texture2D" uid="uid://dbnv5ptamuxnd" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/43.png" id="67_im1tf"]
+[ext_resource type="Texture2D" uid="uid://ddcrrali2y58y" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/1-Idle/44.png" id="68_gnk15"]
+[ext_resource type="Texture2D" uid="uid://37mp5o16dj5i" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/3-Jump Anticipation/1.png" id="69_a6sj4"]
+[ext_resource type="Texture2D" uid="uid://bylgrvqfe8dvq" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/4-Jump/1.png" id="70_v7gv8"]
+[ext_resource type="Texture2D" uid="uid://dimgvo42v8wl2" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/4-Jump/2.png" id="71_0yron"]
+[ext_resource type="Texture2D" uid="uid://lrmyvgjem23p" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/4-Jump/3.png" id="72_205lp"]
+[ext_resource type="Texture2D" uid="uid://covpglacooiv0" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/4-Jump/4.png" id="73_j5wdy"]
+[ext_resource type="Texture2D" uid="uid://bln6btvj4q28a" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/1.png" id="74_is4ys"]
+[ext_resource type="Texture2D" uid="uid://ba6sxm8p8mwj1" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/2.png" id="75_u1tnq"]
+[ext_resource type="Texture2D" uid="uid://bqw3glf8cd1my" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/3.png" id="76_4un0w"]
+[ext_resource type="Texture2D" uid="uid://dgv48rajygkjp" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/4.png" id="77_1k4pt"]
+[ext_resource type="Texture2D" uid="uid://djjqk42c8ajdn" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/5.png" id="78_b553i"]
+[ext_resource type="Texture2D" uid="uid://dbcrpguno60ge" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/6.png" id="79_og4s3"]
+[ext_resource type="Texture2D" uid="uid://dpthmabquej8j" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/7.png" id="80_ys1v0"]
+[ext_resource type="Texture2D" uid="uid://bi5offra76nfy" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/8.png" id="81_vvrbm"]
+[ext_resource type="Texture2D" uid="uid://osnpca3evwli" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/9.png" id="82_kb0en"]
+[ext_resource type="Texture2D" uid="uid://o531wu0xryb2" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/8-Swalow (Bomb)/10.png" id="83_av7vr"]
+[ext_resource type="Texture2D" uid="uid://drom2ydhwds60" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/1.png" id="84_tsehj"]
+[ext_resource type="Texture2D" uid="uid://diyv5nsm41mqp" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/2.png" id="85_8jy0v"]
+[ext_resource type="Texture2D" uid="uid://ck80cfel0chde" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/3.png" id="86_1eftq"]
+[ext_resource type="Texture2D" uid="uid://dkkjbayidwawm" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/4.png" id="87_dypjw"]
+[ext_resource type="Texture2D" uid="uid://8dpql4qfn5in" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/5.png" id="88_3253q"]
+[ext_resource type="Texture2D" uid="uid://dyq3tw08epm2g" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/6.png" id="89_v63kf"]
+[ext_resource type="Texture2D" uid="uid://bh3bcm744s515" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/7.png" id="90_cjhco"]
+[ext_resource type="Texture2D" uid="uid://d24qqkslct7jk" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/8.png" id="91_r3j8s"]
+[ext_resource type="Texture2D" uid="uid://fcqa5i1do1fw" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/9.png" id="92_54url"]
+[ext_resource type="Texture2D" uid="uid://chan2ptpjbexu" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/10.png" id="93_h6f8i"]
+[ext_resource type="Texture2D" uid="uid://cdyllxowqws4f" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/11.png" id="94_j11uk"]
+[ext_resource type="Texture2D" uid="uid://f73qh4kfjghj" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/12.png" id="95_qw7v7"]
+[ext_resource type="Texture2D" uid="uid://dpnp1tqnty14h" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/13.png" id="96_synvb"]
+[ext_resource type="Texture2D" uid="uid://o775o26whvjb" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/2-Run/14.png" id="97_gnfmg"]
+[ext_resource type="Texture2D" uid="uid://dnsygpnjqo7q3" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/6-Ground/1.png" id="98_84fr4"]
+[ext_resource type="Texture2D" uid="uid://b5ff1bd5egu4p" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/6-Ground/2.png" id="99_f7y5g"]
+[ext_resource type="Texture2D" uid="uid://kpw477tykpbl" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/6-Ground/3.png" id="100_3ntyv"]
+[ext_resource type="Texture2D" uid="uid://dcqaugvgihmyw" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/11-Dead Ground/1.png" id="101_xjvpl"]
+[ext_resource type="Texture2D" uid="uid://xtdf7ml8ys1c" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/11-Dead Ground/2.png" id="102_hiuqc"]
+[ext_resource type="Texture2D" uid="uid://da50ga66rjlm7" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/11-Dead Ground/3.png" id="103_sfql4"]
+[ext_resource type="Texture2D" uid="uid://cn0uherwle3u4" path="res://Recursos/Animaciones/Enemigos/6-Enemy-Whale/11-Dead Ground/4.png" id="104_shmti"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0pwrd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0came")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yweml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b8x62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i1765")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yoygu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5am7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r8c7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o5who")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jngen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_isltl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_436ne")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_w1qg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8l6gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_n07j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_si1va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tdr0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bnl3n")
+}],
+"loop": true,
+"name": &"Dead hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_44avw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_grxlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qrae1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_acsa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oitss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6bfpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_i21qx")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_lfmi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1yagn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_a8xd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_muhdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_71s0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4bewa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_k8ysx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_w2nkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ymdp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7qdhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_64mij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_cuqfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_o8j3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xhlj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_kut3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xm3cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_5dxp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_j18ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gvvao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_k5cd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_j4ghb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jr24f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4e341")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ybpif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_lf5yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_472tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ljqt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_rc2qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_jds3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_te2wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_hmlnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_3qnel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_y4q0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_i7svv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_dq1jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_v63th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_l1r33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_l56vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_nit4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3t31a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_78nj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_s3iod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_im1tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_gnk15")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_a6sj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_v7gv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_0yron")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_205lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_j5wdy")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("74_is4ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_u1tnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_4un0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_1k4pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_b553i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_og4s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_ys1v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_vvrbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_kb0en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_av7vr")
+}],
+"loop": true,
+"name": &"Proyectil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("84_tsehj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_8jy0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_1eftq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_dypjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_3253q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_v63kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_cjhco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_r3j8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_54url")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_h6f8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_j11uk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_qw7v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_synvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_gnfmg")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("98_84fr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_f7y5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_3ntyv")
+}],
+"loop": true,
+"name": &"Suelo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_xjvpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_hiuqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_sfql4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_shmti")
+}],
+"loop": true,
+"name": &"Suelo 2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n26x"]
+size = Vector2(63, 40)
+
+[node name="Enemigo" type="CharacterBody2D"]
+script = ExtResource("1_8utuq")
+
+[node name="Ballena" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0pwrd")
+animation = &"Suelo 2"
+frame = 1
+frame_progress = 0.0328285
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_8n26x")
